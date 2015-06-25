@@ -25,8 +25,11 @@ Version: 1.6.0
 
 ### Restore
 
-1. If on another machine/cluster register a repository with a PUT to  /_snapshot/<REPO_NAME> with body as in repo_s3_register.json
-2. View available snapshots by GET to /_snapshot/<REPO_NAME>/_all
-3. Make a POST to /_snapshot/<REPO_NAME>/<SNAPSHOT_NAME>/_restore. Add ?wait_for_complete=true if you want to wait & see restore summary
+1. If on another machine/cluster register a repository with a PUT to `/_snapshot/<REPO_NAME>` with body as in repo_s3_register.json
+2. View available snapshots by GET to `/_snapshot/<REPO_NAME>/_all`
+3. Make a POST to `/_snapshot/<REPO_NAME>/<SNAPSHOT_NAME>/_restore` with optional body as in restore_settings.json. Add ?wait_for_complete=true if you want to wait & see restore summary
 4. Note that searching will not be available on under-recovery shards.
 
+### Search
+1. Basic queries can be done via GET to `/<INDEX_NAME>/<DOC_TYPE>/_search?q=<FIELD_NAME>:<SEARCH_KEYWORD>`
+2. Complex queries must be done by POST to `/<INDEX_NAME>/<DOC_TYPE>/_search with a body carrying specifications
