@@ -13,7 +13,7 @@ Version: 1.6.0
 
 1. Download & unpack (debian): https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.6.0.deb
 2. Replace config/elasticsearch.yml by [elasticsearch.yml](https://github.com/hello/elasticsearch/blob/master/elasticsearch.yml) and config/logging.yml by [logging.yml](https://github.com/hello/elasticsearch/blob/master/logging.yml) from this repo.
-3. Install plugins with shell script [es-plugins.sh](https://github.com/hello/elasticsearch/blob/master/es-plugins.sh) and config/logging.yml under es root directory.
+3. Install plugins with shell script [es-plugins.sh](https://github.com/hello/elasticsearch/blob/master/es-plugins.sh) under elasticsearch root directory.
 4. Run ./elasticsearch (with optional heapsize settings: -Xmx2G -Xms2G)
 5. Go to http://<domain>:9200/_plugin/HQ to see cluster status
 
