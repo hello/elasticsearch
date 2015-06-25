@@ -32,4 +32,4 @@ Version: 1.6.0
 
 ### Search
 1. Basic queries can be done via GET to `/<INDEX_NAME>/<DOC_TYPE>/_search?q=<FIELD_NAME>:<SEARCH_KEYWORD>`
-2. Complex queries must be done by POST to `/<INDEX_NAME>/<DOC_TYPE>/_search with a body carrying specifications
+2. Complex queries must be done by POST to `/<INDEX_NAME>/<DOC_TYPE>/_search` with a body carrying specifications
