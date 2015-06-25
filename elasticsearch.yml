@@ -1,0 +1,12 @@
+node.name: "sense-logs"
+node.master: true
+node.data: true
+
+index.number_of_shards: 5
+index.number_of_replicas: 1
+
+indices.ttl.interval: 120s
+indices.ttl.bulk_size: 10000
+indices.refresh_interval: 30s
+
+bootstrap.mlockall: true
