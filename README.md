@@ -21,13 +21,13 @@ Version: 1.6.0
 ### Backup
 
 1. Register a repository with a PUT to  /_snapshot/<REPO_NAME> with body as in [repo_s3_register.json](https://github.com/hello/elasticsearch/blob/master/repo_s3_register.json)
-2. Make a POST to /_snapshot/<REPO_NAME>/<SNAPSHOT_NAME> with optional body as in [backup_settings.json](https://github.com/hello/elasticsearch/blob/master/backup_settings.json). Add ?wait_for_complete=true if you want to wait & see backup summary
+2. Make a POST to /_snapshot/<REPO_NAME>/<SNAPSHOT_NAME> with optional body as in [backup_settings.json](https://github.com/hello/elasticsearch/blob/master/backup_settings.json). Add ?wait_for_completion=true if you want to wait & see backup summary
 
 ### Restore
 
 1. If on another machine/cluster register a repository with a PUT to `/_snapshot/<REPO_NAME>` with body as in [repo_s3_register.json](https://github.com/hello/elasticsearch/blob/master/repo_s3_register.json)
 2. View available snapshots by GET to `/_snapshot/<REPO_NAME>/_all`
-3. Make a POST to `/_snapshot/<REPO_NAME>/<SNAPSHOT_NAME>/_restore` with optional body as in [restore_settings.json](https://github.com/hello/elasticsearch/blob/master/restore_settings.json). Add ?wait_for_complete=true if you want to wait & see restore summary
+3. Make a POST to `/_snapshot/<REPO_NAME>/<SNAPSHOT_NAME>/_restore` with optional body as in [restore_settings.json](https://github.com/hello/elasticsearch/blob/master/restore_settings.json). Add ?wait_for_completion=true if you want to wait & see restore summary
 4. Note that searching will not be available on under-recovery shards.
 
 ### Search
