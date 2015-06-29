@@ -1,3 +1,5 @@
+cluster.name: elasticsearch
+
 node.name: "sense-logs"
 node.master: true
 node.data: true
@@ -10,3 +12,9 @@ indices.ttl.bulk_size: 10000
 indices.refresh_interval: 30s
 
 bootstrap.mlockall: true
+client.transport.sniff: false
+sniffOnConnectionFault: true
+
+network.publish_host: _ec2:publicIpv4_
+discovery.zen.ping.multicast.enabled: false
+discovery.zen.ping.unicast.hosts: ["ec2-54-164-33-1.compute-1.amazonaws.com"]
